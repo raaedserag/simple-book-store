@@ -17,6 +17,9 @@ module.exports = function (app) {
         "/books": require("../routes/books-route")
     }).map((route => app.use(route[0], route[1])))
 
-    // Apply Error Middle ware
-    app.use(error);
+    // Apply Error Middleware
+    app.use((err, req, res, next) => {
+        console.error(err)
+        res.status(500).send("Internal server error")
+    });
 };
