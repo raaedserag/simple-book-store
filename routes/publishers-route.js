@@ -3,16 +3,16 @@ const router = express.Router();
 const publishersHandler = require("../controller/publishers-controller")
 //-----------------------------------
 
-// Add new book
+// Add new publisher
 router.post('/', publishersHandler.insertPublisher)
 
-// Get all books
+// Get all publishers
 router.get('/', publishersHandler.getAllPublishers)
 
-// Buy book
-router.put('/', publishersHandler.updatePublisher)
+// Update publisher
+router.put('/:name', publishersHandler.updatePublisher)
 
-// Delete Book
+// Delete publisher
 router.delete('/:name', publishersHandler.deletePublisher)
 
 

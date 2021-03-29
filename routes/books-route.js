@@ -9,11 +9,10 @@ router.post('/', booksHandler.insertBook)
 // Get all books
 router.get('/', booksHandler.getAllBooks)
 
-// Buy book
-router.put('/', booksHandler.buyBook)
+// Update book
+router.put('/:number', booksHandler.updateBook)
 
-// Delete Book
+// Delete book
 router.delete('/:number', booksHandler.deleteBook)
-
 
 module.exports = router;

@@ -14,12 +14,15 @@ module.exports = function (app) {
 
     // Apply Routes
     Object.entries({
-        "/books": require("../routes/books-route")
+        "/authors": require("./authors-route"),
+        "/customers": require("./customers-route"),
+        "/publishers": require("./publishers-route"),
+        "/books": require("./books-route"),
     }).map((route => app.use(route[0], route[1])))
 
     // Apply Error Middleware
     app.use((err, req, res, next) => {
         console.error(err)
-        res.status(500).send("Internal server error")
+        res.status(500).send(err.message)
     });
 };

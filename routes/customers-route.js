@@ -3,17 +3,19 @@ const router = express.Router();
 const customersHandler = require("../controller/customers-controller")
 //-----------------------------------
 
-// Add new book
+// Add new customer
 router.post('/', customersHandler.insertCustomer)
 
-// Get all books
+// Get all customers
 router.get('/', customersHandler.getAllCustomers)
 
-// Buy book
-router.put('/', customersHandler.updateCustomer)
+// Update customer
+router.put('/:number', customersHandler.updateCustomer)
 
-// Delete Book
+// Delete customer
 router.delete('/:number', customersHandler.deleteCustomer)
 
+// Buy a book
+router.post('/buy', customersHandler.buyBook)
 
 module.exports = router;

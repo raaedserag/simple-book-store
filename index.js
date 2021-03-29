@@ -7,7 +7,7 @@ let app = express();
 
 
 (async function () {
-    require("express-async-errors");
+    require("express-async-handler");
     process
         .on("unhandledRejection", ex => {
             throw ex

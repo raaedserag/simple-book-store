@@ -1,19 +1,47 @@
 const Customer = require("../models/sequelize-orm-index")["Customer"]
+const Sale = require("../models/sequelize-orm-index")["Sale"]
 
 module.exports = {
-    insertCustomer: function (req, res) {
-
+    insertCustomer: async function (req, res) {
+        let result = await Customer.create(req.body)
+        res.status(200).send(result)
     },
 
-    getAllCustomers: function (req, res) {
-
+    getAllCustomers: async function (req, res) {
+        let result = await Customer.findAll({
+            where: req.query
+        })
+        res.status(200).send(result)
     },
 
-    updateCustomer: function (req, res) {
+    updateCustomer: async function (req, res) {
+        let customer = await Customer.find({
+            customerNumber: req.params.number
+        })
+        if (customer) {
+            // Update passed attributes only (from req.body)
+            Object.entries(req.body).forEach(attr => {
+                customer[attr[0]] = attr[1]
+            });
+            await customer.save()
 
+        } else {
+            throw new Error("Customer not found")
+        }
+        res.status(200).send(customer);
     },
 
-    deleteCustomer: function (req, res) {
+    deleteCustomer: async function (req, res) {
+        let customer = await Customer.find({
+            customerNumber: req.params.number
+        })
+        if (customer) await customer.destroy();
 
+        res.status(200).send("deleted")
+    },
+
+    buyBook: async function (req, res) {
+        let result = await Sale.create(req.body)
+        res.status(200).send(result)
     }
 }

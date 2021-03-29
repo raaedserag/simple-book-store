@@ -8,8 +8,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     bookName: DataTypes.STRING,
     publicationYear: DataTypes.STRING,
-    pages: DataTypes.INTEGER,
-    price: DataTypes.FLOAT
+    pages: DataTypes.INTEGER
   }, {
     timestamps: false
   });
