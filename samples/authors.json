@@ -1,0 +1,6 @@
+[
+    {"authorName": "auth1", "yearBorn": "1973", "yearDied": "2011"},
+    {"authorName": "auth2", "yearBorn": "1970", "yearDied": null},
+    {"authorName": "auth3", "yearBorn": "1982", "yearDied": "2005"},
+    {"authorName": "auth4", "yearBorn": "1965", "yearDied": null}
+]

@@ -1,0 +1,19 @@
+[{
+    "publisherName": "pub1",
+    "city": "Zeska",
+    "country": "Mosco",
+    "president": "Alan turin",
+    "yearFounded": "2007"
+}, {
+    "publisherName": "pub2",
+    "city": "Newyork",
+    "country": "USA",
+    "president": "Bill Gates",
+    "yearFounded": "2005"
+},{
+    "publisherName": "pub3",
+    "city": "Holan",
+    "country": "Siberya",
+    "president": "Strootman",
+    "yearFounded": "2016"
+}]

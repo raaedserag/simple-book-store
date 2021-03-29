@@ -1,0 +1,19 @@
+[{
+    "customerName": "cus1",
+    "street": "Saint catrina STR",
+    "city": "Polyana",
+    "state": "Erangel",
+    "country": "USA"
+}, {
+    "customerName": "cus2",
+    "street": "Wezol trat STR",
+    "city": "Malbard",
+    "state": "Stroots",
+    "country": "Denmark"
+},{
+    "customerName": "cus3",
+    "street": "Colobin drago STR",
+    "city": "Zenhar",
+    "state": "Ramsy",
+    "country": "Austria"
+}]
