@@ -1,0 +1,8 @@
+{
+  "serverPort": 3000,
+  "dbHost": "localhost",
+  "dbPort": 3306,
+  "dbUserName": "root",
+  "dbPass": "hodhod167",
+  "dbSchema": "book_store"
+}

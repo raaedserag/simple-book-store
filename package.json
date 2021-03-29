@@ -1,0 +1,22 @@
+{
+  "name": "book-store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "db-init": "node ./scripts/db-initializer.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "~4.16.1",
+    "express-async-handler": "^1.1.4",
+    "joi": "^17.3.0",
+    "lodash": "^4.17.15",
+    "morgan": "~1.9.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^5.21.3"
+  },
+  "author": "",
+  "license": "ISC"
+}
