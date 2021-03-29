@@ -1,0 +1,30 @@
+###
+@host = http://localhost:3000
+
+################ Books ##############
+###
+POST {{host}}/books
+Content-Type: application/json
+
+{
+    "bookName": "Clean code",
+    "publicationYear": "2012",
+    "pages": "213",
+    "publisher_id": "pub245"
+}
+###
+###
+GET {{host}}/books?publisher_id=pub245
+###
+###
+PUT {{host}}/books/3
+Content-Type: application/json
+
+{
+    "bookName": "Clean Code",
+    "publicationYear": "2010"
+}
+###
+###
+DELETE {{host}}/books/3
+###

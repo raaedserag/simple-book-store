@@ -15,8 +15,10 @@ module.exports = {
     },
 
     updateCustomer: async function (req, res) {
-        let customer = await Customer.find({
-            customerNumber: req.params.number
+        let customer = await Customer.findOne({
+            where: {
+                customerNumber: req.params.number
+            }
         })
         if (customer) {
             // Update passed attributes only (from req.body)
@@ -32,8 +34,10 @@ module.exports = {
     },
 
     deleteCustomer: async function (req, res) {
-        let customer = await Customer.find({
-            customerNumber: req.params.number
+        let customer = await Customer.findOne({
+            where: {
+                customerNumber: req.params.number
+            }
         })
         if (customer) await customer.destroy();
 

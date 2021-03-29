@@ -14,8 +14,10 @@ module.exports = {
     },
 
     updatePublisher: async function (req, res) {
-        let publisher = await Publisher.find({
-            publisherName: req.params.name
+        let publisher = await Publisher.findOne({
+            where: {
+                publisherName: req.params.name
+            }
         })
         if (publisher) {
             // Update passed attributes only (from req.body)
@@ -31,13 +33,15 @@ module.exports = {
     },
 
     deletePublisher: async function (req, res) {
-        let publisher = await Publisher.find({
-            publisherName: req.params.name
+        let publisher = await Publisher.findOne({
+            where: {
+                publisherName: req.params.name
+            }
         })
         if (publisher) await publisher.destroy();
 
         res.status(200).send("deleted")
     },
 
-    
+
 }

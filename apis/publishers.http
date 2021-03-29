@@ -1,0 +1,30 @@
+###
+@host = http://localhost:3000
+
+################ publishers ##############
+###
+POST {{host}}/publishers
+Content-Type: application/json
+
+{
+    "publisherName": "pub245",
+    "city": "Smack",
+    "country": "Iran",
+    "president": "Martin Fuller",
+    "yearFounded": "2007"
+}
+###
+###
+GET {{host}}/publishers?city=Smack
+###
+###
+PUT {{host}}/publishers/pub245
+Content-Type: application/json
+
+{
+    "yearFounded": "2006"
+}
+###
+###
+DELETE {{host}}/publishers/4
+###

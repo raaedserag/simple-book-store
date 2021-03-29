@@ -7,7 +7,7 @@ const authorsHandler = require("../controller/authors-controller")
 router.post('/', authorsHandler.insertAuthor)
 
 // Get all authors
-router.get('/', authorsHandler.insertAuthor)
+router.get('/', authorsHandler.getAllAuthors)
 
 // Update author
 router.put('/:number', authorsHandler.updateAuthor)

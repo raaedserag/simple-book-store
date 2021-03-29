@@ -15,8 +15,10 @@ module.exports = {
     },
 
     updateAuthor: async function (req, res) {
-        let author = await Author.find({
-            authorNumber: req.params.number
+        let author = await Author.findOne({
+            where: {
+                authorNumber: req.params.number
+            }
         })
         if (author) {
             // Update passed attributes only (from req.body)
@@ -32,8 +34,10 @@ module.exports = {
     },
 
     deleteAuthor: async function (req, res) {
-        let author = await Author.find({
-            authorNumber: req.params.number
+        let author = await Author.findOne({
+            where: {
+                authorNumber: req.params.number
+            }
         })
         if (author) await author.destroy();
 

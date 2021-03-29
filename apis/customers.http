@@ -1,0 +1,39 @@
+###
+@host = http://localhost:3000
+
+################ customers ##############
+###
+POST {{host}}/customers
+Content-Type: application/json
+
+{
+    "name": "cus20",
+    "street": "Flanks",
+    "city": "Flweda",
+    "state": "Luren",
+    "country": "Austria"
+}
+###
+###
+GET {{host}}/customers?country=Austria
+###
+###
+PUT {{host}}/customers/4
+Content-Type: application/json
+
+{
+    "street": "Yuda"
+}
+###
+###
+DELETE {{host}}/customers/4
+###
+###
+POST {{host}}/customers/buy
+Content-Type: application/json
+
+{
+    "book_number": "1",
+    "customer_number": "4"
+}
+###

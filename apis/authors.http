@@ -1,0 +1,41 @@
+###
+@host = http://localhost:3000
+
+################ Authors ##############
+###
+POST {{host}}/authors
+Content-Type: application/json
+
+{
+    "authorName": "auth10",
+    "yearBorn": "1970",
+    "yearDied": "2009"
+}
+###
+
+###
+GET {{host}}/authors?yearBorn=1970
+###
+
+###
+PUT {{host}}/authors/5
+Content-Type: application/json
+
+{
+    "authorName": "auth101010",
+    "yearBorn": "1971"
+}
+###
+
+###
+DELETE {{host}}/authors/5
+###
+###
+POST {{host}}/authors/write
+Content-Type: application/json
+
+{
+    "book_number": "1",
+    "author_number": "5"
+}
+###

@@ -14,8 +14,10 @@ module.exports = {
     },
 
     updateBook: async function (req, res) {
-        let book = await BooK.find({
-            bookNumber: req.params.number
+        let book = await BooK.findOne({
+            where: {
+                bookNumber: req.params.number
+            }
         })
         if (book) {
             // Update passed attributes only (from req.body)
@@ -31,8 +33,10 @@ module.exports = {
     },
 
     deleteBook: async function (req, res) {
-        let book = await BooK.find({
-            bookNumber: req.params.number
+        let book = await BooK.findOne({
+            where: {
+                bookNumber: req.params.number
+            }
         })
         if (book) await book.destroy();
 
