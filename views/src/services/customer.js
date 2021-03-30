@@ -2,11 +2,11 @@ import axios from "axios";
 // import axios from "axios";
 export async function GetAllCstomer() {
   // debugger;
-  const { data } = await axios.get("http://10.43.30.95:4000/customers");
+  const { data } = await axios.get("http://localhost:4000/customers");
   return data;
 }
 export async function GetItemById(id) {
-  const { data } = await axios.get(`http://10.43.30.95:4000/customers`, {
+  const { data } = await axios.get(`http://localhost:4000/customers`, {
     params: { customerNumber: id },
   });
   console.log(data);
@@ -15,19 +15,19 @@ export async function GetItemById(id) {
 
 export async function Delete(id) {
   const token = localStorage.getItem("token");
-  const data = await axios.delete(`http://10.43.30.95:4000/customers/${id}`);
+  const data = await axios.delete(`http://localhost:4000/customers/${id}`);
   console.log(data);
 }
 export async function Add(item) {
   debugger;
 
-  const { data } = await axios.post("http://10.43.30.95:4000/customers", item);
+  const { data } = await axios.post("http://localhost:4000/customers", item);
   console.log(data);
   return data;
 }
 export async function Edit(item, id) {
   const { data } = await axios.put(
-    `http://10.43.30.95:4000/customers/${id}`,
+    `http://localhost:4000/customers/${id}`,
     item
   );
   return data;

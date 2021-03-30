@@ -1,5 +1,5 @@
 ###
-@host = http://10.43.30.95:4000
+@host = http://localhost:4000
 
 ################ Books ##############
 ###
@@ -26,5 +26,5 @@ Content-Type: application/json
 }
 ###
 ###
-DELETE {{host}}/books/3
+DELETE {{host}}/books/1
 ###
