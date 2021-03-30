@@ -1,4 +1,5 @@
 const Author = require("../models/sequelize-orm-index")["Author"]
+const Wrote = require("../models/sequelize-orm-index")["Wrote"]
 
 module.exports = {
     insertAuthor: async function (req, res) {
@@ -44,7 +45,16 @@ module.exports = {
                 authorNumber: req.params.number
             }
         })
-        if (author) await author.destroy();
+
+        let wrotes = await Wrote.findOne({
+            where: {
+                authorNumber: req.params.number
+            }
+        })
+        if (author) {
+            await author.destroy();
+            await wrotes.destroy();
+        }
 
         res.status(200).send(author)
     }

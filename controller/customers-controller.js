@@ -39,13 +39,17 @@ module.exports = {
                 customerNumber: req.params.number
             }
         })
-        if (customer) await customer.destroy();
+
+        let sales = await Sale.findOne({
+            where: {
+                customerNumber: req.params.number
+            }
+        })
+        if (customer) {
+            await customer.destroy();
+            await sales.destroy();
+        }
 
         res.status(200).send(customer)
-    },
-
-    buyBook: async function (req, res) {
-        let result = await Sale.create(req.body)
-        res.status(200).send(result)
     }
 }
