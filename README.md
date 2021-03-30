@@ -21,6 +21,6 @@
 
 ### `npm start`
 
-- Then, open another terminal as adminstrator on ./web directory and start web pages by running the following
+- Then, open another terminal as adminstrator on ./views directory and start web pages by running the following
 
 ### `npm start`
