@@ -39,15 +39,8 @@ module.exports = {
                 customerNumber: req.params.number
             }
         })
-
-        let sales = await Sale.findOne({
-            where: {
-                customerNumber: req.params.number
-            }
-        })
         if (customer) {
             await customer.destroy();
-            await sales.destroy();
         }
 
         res.status(200).send(customer)

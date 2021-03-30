@@ -40,20 +40,8 @@ module.exports = {
                 bookNumber: req.params.number
             }
         })
-        let sales = await Sale.findOne({
-            where: {
-                bookNumber: req.params.number
-            }
-        })
-        let wrotes = await Wrote.findOne({
-            where: {
-                bookNumber: req.params.number
-            }
-        })
         if (book) {
             await book.destroy();
-            await sales.destroy();
-            await wrotes.destroy();
         }
 
         res.status(200).send(book)

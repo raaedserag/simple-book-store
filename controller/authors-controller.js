@@ -45,15 +45,8 @@ module.exports = {
                 authorNumber: req.params.number
             }
         })
-
-        let wrotes = await Wrote.findOne({
-            where: {
-                authorNumber: req.params.number
-            }
-        })
         if (author) {
             await author.destroy();
-            await wrotes.destroy();
         }
 
         res.status(200).send(author)
