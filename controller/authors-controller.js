@@ -1,5 +1,4 @@
 const Author = require("../models/sequelize-orm-index")["Author"]
-const Wrote = require("../models/sequelize-orm-index")["Wrote"]
 
 module.exports = {
     insertAuthor: async function (req, res) {
@@ -8,12 +7,6 @@ module.exports = {
     },
 
     getAllAuthors: async function (req, res) {
-        let result = await Author.findAll({
-            where: req.query
-        })
-        res.status(200).send(result)
-    },
-    getAuthorById: async function (req, res) {
         let result = await Author.findAll({
             where: req.query
         })

@@ -9,9 +9,6 @@ router.post('/', authorsHandler.insertAuthor)
 // Get all authors
 router.get('/', authorsHandler.getAllAuthors)
 
-// Get author by number
-router.get('/:number', authorsHandler.getAllAuthors)
-
 // Update author
 router.put('/:number', authorsHandler.updateAuthor)
 

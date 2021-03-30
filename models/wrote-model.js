@@ -5,7 +5,9 @@ module.exports = (sequelize, DataTypes) => {
     });
     Wrote.associate = function (models) {
         Wrote.belongsTo(models.Book, {
-            foreignKey: 'bookNumber'
+            foreignKey: 'bookNumber',
+            onDelete: 'cascade',
+            onUpdate: 'cascade'
         });
         Wrote.belongsTo(models.Author, {
             foreignKey: 'authorNumber',
