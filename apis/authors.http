@@ -1,5 +1,5 @@
 ###
-@host = http://localhost:3000
+@host = http://10.43.30.95:4000
 
 ################ Authors ##############
 ###
@@ -14,7 +14,7 @@ Content-Type: application/json
 ###
 
 ###
-GET {{host}}/authors?yearBorn=1970
+GET {{host}}/authors
 ###
 
 ###
@@ -28,5 +28,5 @@ Content-Type: application/json
 ###
 
 ###
-DELETE {{host}}/authors/5
+DELETE {{host}}/authors/1
 ###

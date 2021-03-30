@@ -1,0 +1,18 @@
+[
+    {
+        "bookNumber": "1",
+        "authorNumber": "2"
+    },
+    {
+        "bookNumber": "1",
+        "authorNumber": "3"
+    },
+    {
+        "bookNumber": "2",
+        "authorNumber": "3"
+    },
+    {
+        "bookNumber": "3",
+        "authorNumber": "4"
+    }
+]

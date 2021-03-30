@@ -40,7 +40,7 @@ module.exports = {
         })
         if (publisher) await publisher.destroy();
 
-        res.status(200).send("deleted")
+        res.status(200).send(publisher)
     },
 
 

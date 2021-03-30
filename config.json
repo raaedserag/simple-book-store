@@ -1,5 +1,5 @@
 {
-  "serverPort": 3000,
+  "serverPort": 4000,
   "dbHost": "10.22.1.33",
   "dbPort": 3306,
   "dbUserName": "Smart",

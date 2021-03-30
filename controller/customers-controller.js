@@ -41,7 +41,7 @@ module.exports = {
         })
         if (customer) await customer.destroy();
 
-        res.status(200).send("deleted")
+        res.status(200).send(customer)
     },
 
     buyBook: async function (req, res) {

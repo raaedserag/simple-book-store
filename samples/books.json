@@ -1,0 +1,20 @@
+[
+    {
+        "bookName": "Clean code",
+        "publicationYear": "2012",
+        "pages": "213",
+        "publisherName": "pub2"
+    },
+    {
+        "bookName": "Book 1",
+        "publicationYear": "2019",
+        "pages": "1265",
+        "publisherName": "pub1"
+    },
+    {
+        "bookName": "Book",
+        "publicationYear": "2012",
+        "pages": "213",
+        "publisherName": "pub1"
+    }
+]

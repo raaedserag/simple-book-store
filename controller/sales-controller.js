@@ -61,6 +61,6 @@ module.exports = {
         })
         if (sale) await sale.destroy();
 
-        res.status(200).send("deleted")
+        res.status(200).send(sale)
     }
 }

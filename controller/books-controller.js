@@ -40,7 +40,7 @@ module.exports = {
         })
         if (book) await book.destroy();
 
-        res.status(200).send("deleted")
+        res.status(200).send(book)
     },
 
     buyBook: async function (req, res) {

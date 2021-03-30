@@ -12,6 +12,12 @@ module.exports = {
         })
         res.status(200).send(result)
     },
+    getAuthorById: async function (req, res) {
+        let result = await Author.findAll({
+            where: req.query
+        })
+        res.status(200).send(result)
+    },
 
     updateAuthor: async function (req, res) {
         let author = await Author.findOne({
@@ -40,6 +46,6 @@ module.exports = {
         })
         if (author) await author.destroy();
 
-        res.status(200).send("deleted")
+        res.status(200).send(author)
     }
 }

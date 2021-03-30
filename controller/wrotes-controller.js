@@ -60,6 +60,6 @@ module.exports = {
         })
         if (wrote) await wrote.destroy();
 
-        res.status(200).send("deleted")
+        res.status(200).send(wrote)
     }
 }
