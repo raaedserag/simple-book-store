@@ -30,12 +30,3 @@ Content-Type: application/json
 ###
 DELETE {{host}}/authors/5
 ###
-###
-POST {{host}}/authors/write
-Content-Type: application/json
-
-{
-    "book_number": "1",
-    "author_number": "5"
-}
-###

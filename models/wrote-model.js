@@ -5,10 +5,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     Wrote.associate = function (models) {
         Wrote.belongsTo(models.Book, {
-            foreignKey: 'book_number'
+            foreignKey: 'bookNumber'
         });
         Wrote.belongsTo(models.Author, {
-            foreignKey: 'author_number'
+            foreignKey: 'authorNumber'
         });
     };
     return Wrote;

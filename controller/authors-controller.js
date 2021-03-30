@@ -1,5 +1,4 @@
 const Author = require("../models/sequelize-orm-index")["Author"]
-const Wrote = require("../models/sequelize-orm-index")["Wrote"]
 
 module.exports = {
     insertAuthor: async function (req, res) {
@@ -42,10 +41,5 @@ module.exports = {
         if (author) await author.destroy();
 
         res.status(200).send("deleted")
-    },
-
-    writeBook: async function (req, res) {
-        let result = await Wrote.create(req.body)
-        res.status(200).send(result)
     }
 }

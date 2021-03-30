@@ -13,12 +13,12 @@ module.exports = function (app) {
     app.use(require("morgan")("tiny")) // middleware to enable requests logging
 
     // Apply Routes
-    Object.entries({
-        "/authors": require("./authors-route"),
-        "/customers": require("./customers-route"),
-        "/publishers": require("./publishers-route"),
-        "/books": require("./books-route"),
-    }).map((route => app.use(route[0], route[1])))
+    app.use("/authors", require("./authors-route.js"))
+    app.use("/customers", require("./customers-route.js"))
+    app.use("/publishers", require("./publishers-route.js"))
+    app.use("/books", require("./books-route.js"))
+    app.use("/sales", require("./sales-route.js"))
+    app.use("/wrotes", require("./wrotes-route.js"))
 
     // Apply Error Middleware
     app.use((err, req, res, next) => {

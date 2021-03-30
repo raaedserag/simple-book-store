@@ -28,12 +28,3 @@ Content-Type: application/json
 ###
 DELETE {{host}}/customers/4
 ###
-###
-POST {{host}}/customers/buy
-Content-Type: application/json
-
-{
-    "book_number": "1",
-    "customer_number": "4"
-}
-###

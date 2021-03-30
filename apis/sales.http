@@ -1,0 +1,30 @@
+###
+@host = http://localhost:3000
+
+################ sales ##############
+###
+POST {{host}}/sales
+Content-Type: application/json
+
+{
+    "bookNumber": "1",
+    "customerNumber": "3",
+    "date": "2021-03-30T07:17:48.676Z",
+    "price": "426.5",
+    "quantity": "6"
+}
+###
+###
+GET {{host}}/sales
+###
+###
+PUT {{host}}/sales/1
+Content-Type: application/json
+
+{
+    "quantity": "6"
+}
+###
+###
+DELETE {{host}}/sales/1
+###
