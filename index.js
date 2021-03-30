@@ -20,6 +20,6 @@ let app = express();
     require("./routes/routes-index")(app);
 
     // Initiate the server on the selected host:port
-    app.listen(serverPort, () => console.log(`Server started as on http://localhost:${serverPort}/`));
+    app.listen(serverPort, () => console.log(`Server started`));
 
 })();
