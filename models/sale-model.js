@@ -9,10 +9,10 @@ module.exports = (sequelize, DataTypes) => {
     });
     Sale.associate = function (models) {
         Sale.belongsTo(models.Book, {
-            foreignKey: 'book_number'
+            foreignKey: 'bookNumber'
         });
         Sale.belongsTo(models.Customer, {
-            foreignKey: 'customer_number'
+            foreignKey: 'customerNumber'
         });
     };
     return Sale;

@@ -1,4 +1,6 @@
 const BooK = require("../models/sequelize-orm-index")["Book"]
+const Sale = require("../models/sequelize-orm-index")["Sale"]
+const Wrote = require("../models/sequelize-orm-index")["Wrote"]
 
 module.exports = {
     insertBook: async function (req, res) {
@@ -38,13 +40,22 @@ module.exports = {
                 bookNumber: req.params.number
             }
         })
-        if (book) await book.destroy();
+        let sales = await Sale.findOne({
+            where: {
+                bookNumber: req.params.number
+            }
+        })
+        let wrotes = await Wrote.findOne({
+            where: {
+                bookNumber: req.params.number
+            }
+        })
+        if (book) {
+            await book.destroy();
+            await sales.destroy();
+            await wrotes.destroy();
+        }
 
-        res.status(200).send("deleted")
-    },
-
-    buyBook: async function (req, res) {
-        let result = await Sale.create(req.body)
-        res.status(200).send(result)
+        res.status(200).send(book)
     }
 }

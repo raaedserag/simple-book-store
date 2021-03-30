@@ -15,7 +15,4 @@ router.put('/:number', customersHandler.updateCustomer)
 // Delete customer
 router.delete('/:number', customersHandler.deleteCustomer)
 
-// Buy a book
-router.post('/buy', customersHandler.buyBook)
-
 module.exports = router;

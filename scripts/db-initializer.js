@@ -10,6 +10,9 @@ const {
 const authorsSamples = require("../samples/authors.json")
 const customersSamples = require("../samples/customers.json")
 const publishersSamples = require("../samples/publishers.json")
+const booksSamples = require("../samples/books.json")
+const salesSamples = require("../samples/sales.json")
+const wrotesSamples = require("../samples/wrotes.json")
 
 async function Initialize() {
     let tempSequelizeInstance = new Sequelize(null, dbUserName, dbPass, {
@@ -28,6 +31,9 @@ async function Initialize() {
     await models.Author.bulkCreate(authorsSamples)
     await models.Customer.bulkCreate(customersSamples)
     await models.Publisher.bulkCreate(publishersSamples)
+    await models.Book.bulkCreate(booksSamples)
+    await models.Sale.bulkCreate(salesSamples)
+    await models.Wrote.bulkCreate(wrotesSamples)
 
     process.exit(0)
 }

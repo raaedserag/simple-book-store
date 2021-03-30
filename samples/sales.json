@@ -1,0 +1,23 @@
+[
+    {
+        "bookNumber": "1",
+        "customerNumber": "3",
+        "date": "2021-05-29T07:17:48.676Z",
+        "price": "426.5",
+        "quantity": "1"
+    },
+    {
+        "bookNumber": "1",
+        "customerNumber": "2",
+        "date": "2021-03-30T07:17:48.676Z",
+        "price": "4155",
+        "quantity": "10"
+    },
+    {
+        "bookNumber": "2",
+        "customerNumber": "3",
+        "date": "2021-03-30T07:17:48.676Z",
+        "price": "123.6",
+        "quantity": "5"
+    }
+]

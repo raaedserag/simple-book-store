@@ -1,0 +1,27 @@
+###
+@host = http://10.43.30.95:4000
+
+################ wrotes ##############
+###
+POST {{host}}/wrotes
+Content-Type: application/json
+
+{
+    "bookNumber": "1",
+    "authorNumber": "2"
+}
+###
+###
+GET {{host}}/wrotes
+###
+###
+PUT {{host}}/wrotes/1
+Content-Type: application/json
+
+{
+    "author_number": "4"
+}
+###
+###
+DELETE {{host}}/wrotes/1
+###

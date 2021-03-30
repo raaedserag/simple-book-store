@@ -13,6 +13,12 @@ module.exports = {
         })
         res.status(200).send(result)
     },
+    getAuthorById: async function (req, res) {
+        let result = await Author.findAll({
+            where: req.query
+        })
+        res.status(200).send(result)
+    },
 
     updateAuthor: async function (req, res) {
         let author = await Author.findOne({
@@ -39,13 +45,17 @@ module.exports = {
                 authorNumber: req.params.number
             }
         })
-        if (author) await author.destroy();
 
-        res.status(200).send("deleted")
-    },
+        let wrotes = await Wrote.findOne({
+            where: {
+                authorNumber: req.params.number
+            }
+        })
+        if (author) {
+            await author.destroy();
+            await wrotes.destroy();
+        }
 
-    writeBook: async function (req, res) {
-        let result = await Wrote.create(req.body)
-        res.status(200).send(result)
+        res.status(200).send(author)
     }
 }
